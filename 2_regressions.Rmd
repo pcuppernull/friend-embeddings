@@ -1,8 +1,10 @@
 ---
-title: "c"
+title: "Regressions"
 author: "Pete Cuppernull"
 date: "4/24/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 # Load Libraries
@@ -11,8 +13,6 @@ library(tidyverse)
 library(countrycode)
 library(haven)
 library(stargazer)
-#library(jtools)
-#library(lm.beta)
 library(scales)
 ```
 
@@ -229,7 +229,7 @@ summary(mod_usthem_fe_cy)
 ### Friendship
 ```{r}
 stargazer(mod_friend, mod_friend_fe, mod_friend_cy, omit = c('[y][e][a][r]','[c][o][u][n][t][r][y]'), 
-          type = "latex",
+          type = "text",
           add.lines=list(c('Year Fixed Effects', 'No', 'Yes', 'Yes'),
                          c('Country Fixed Effects', 'No', 'No', 'Yes')),
           dep.var.caption = "Friendship Percentile Rank",
