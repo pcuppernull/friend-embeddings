@@ -1,5 +1,5 @@
 ---
-title: "Regressions"
+title: "c"
 author: "Pete Cuppernull"
 date: "4/24/2022"
 output:
@@ -13,6 +13,8 @@ library(tidyverse)
 library(countrycode)
 library(haven)
 library(stargazer)
+#library(jtools)
+#library(lm.beta)
 library(scales)
 ```
 
